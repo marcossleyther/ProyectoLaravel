@@ -5,7 +5,7 @@
 
     <h1>Editar Heroe</h1>
 
-    <form action="{{ route('admin.heroes.update') }}" method="post">
+    <form action="{{ route('admin.heroes.update', ['id'=> $hero->id]) }}" method="post">
         @csrf
 
         <div class="form-group">

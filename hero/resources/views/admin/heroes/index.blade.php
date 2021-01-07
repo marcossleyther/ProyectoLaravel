@@ -36,8 +36,21 @@
                         <td>{{ $hero->coins }}</td>
                         <td>{{ $hero->xp }}</td>
                         <td>
-                            <a href="{{ route('admin.heroes.edit', ['id'=> $hero->id]) }}" class="btn btn-warning">Editar</a>
-                            <a href="{{ route('admin.heroes') }}" class="btn btn-danger">Borar</a>
+                            <div class="row">
+                                
+                                <div class="col">
+                                    <a href="{{ route('admin.heroes.edit', ['id'=> $hero->id]) }}" class="btn btn-warning">Editar</a>
+                                </div>
+
+                                <div class="col">
+                                    
+                                    <form action="{{route('admin.heroes.destroy', ['id'=> $hero->id]) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger">Borar</button>
+                                    </form>
+                                </div>
+                            </div>
                         </td>
                     </tr>
                 @endforeach

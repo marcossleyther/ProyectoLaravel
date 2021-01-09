@@ -55,7 +55,7 @@ class HeroController extends Controller
 
         $hero->save();
         
-        return redirect()->route('admin.heroes');
+        return redirect()->route('heroes.index');
     }
 
 
@@ -69,6 +69,6 @@ class HeroController extends Controller
         $hero = Hero::find($id);
         $hero->delete();
 
-        return redirect()->route('admin.heroes');
+        return redirect()->route('heroes.index');
     }
 }

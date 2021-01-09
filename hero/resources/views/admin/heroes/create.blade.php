@@ -4,7 +4,7 @@
     
 
     <h1>Crear Heroes</h1>
-    <form action="{{ route('admin.heroes.store') }}" method="post">
+    <form action="{{ route('heroes.store') }}" method="post">
         @csrf
         <div class="form-group">
             <label for="name">Nombre</label>

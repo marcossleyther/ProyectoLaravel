@@ -12,18 +12,20 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="{{ route('admin') }}">Hero</a>
+
+        <a class="navbar-brand" href="{{ route('admin.index') }}">Hero</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ route('admin') }}">Home</a>
+                    <a class="nav-link" href="{{ route('admin.index') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin.heroes') }}">Heroes</a>
+                    <a class="nav-link" href="{{ route('heroes.index') }}">Heroes</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('admin.items') }}">Items</a>
@@ -38,11 +40,7 @@
     <div class="container" style="margin-top: 10px">
         @yield('content')
     </div>
-
-
-
-
-    
+  
 </body>
 
 </html>

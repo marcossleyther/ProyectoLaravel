@@ -6,7 +6,7 @@
     </div>
 
     <div class="col">
-        <a href="{{ route('admin.heroes.create') }}" class="btn btn-primary mb-4 mt-2 ">Crear Heroe</a>
+        <a href="{{ route('heroes.create') }}" class="btn btn-primary mb-4 mt-2 ">Crear Heroe</a>
     </div>
 
     <div class="row">
@@ -39,12 +39,12 @@
                             <div class="row">
                                 
                                 <div class="col">
-                                    <a href="{{ route('admin.heroes.edit', ['id'=> $hero->id]) }}" class="btn btn-warning">Editar</a>
+                                    <a href="{{ route('heroes.edit', ['hero'=> $hero->id]) }}" class="btn btn-warning">Editar</a>
                                 </div>
 
                                 <div class="col">
                                     
-                                    <form action="{{route('admin.heroes.destroy', ['id'=> $hero->id]) }}" method="POST">
+                                    <form action="{{route('heroes.destroy', ['hero'=> $hero->id]) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger">Borar</button>

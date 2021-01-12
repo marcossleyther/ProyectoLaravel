@@ -36,7 +36,7 @@ Route::group(['prefix' => 'admin'], function(){
         Route::delete('destroy/{id}', [HeroController::class, 'destroy'])->name('admin.heroes.destroy');
     });
 */
-    Route::get('items', [ItemController::class, 'index'])->name('admin.items');
-    Route::get('enemies', [EnemyController::class, 'index'])->name('admin.enemies');
+    Route::resource('item', ItemController::class);
+    Route::resource('enemy', EnemyController::class);
     
 });

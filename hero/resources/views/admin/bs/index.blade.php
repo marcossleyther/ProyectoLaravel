@@ -7,16 +7,16 @@
 
     <div class="row text-center text-white mt-2">
 
-        <div class="col bg-primary">
-            <h2>Hero</h2>
+        <div class="col-5 bg-primary">
+            <h2>{{ $heroName }}</h2>
         </div>
 
-        <div class="col bg-warning">
+        <div class="col-2 bg-warning">
             <h2>-- Vs --</h2>
         </div>
 
-        <div class="col bg-danger">
-            <h2>Enemy</h2>
+        <div class="col-5 bg-danger">
+            <h2>{{ $enemyName }}</h2>
         </div>
     </div>
 
@@ -24,14 +24,12 @@
         <h2>Eventos de Batalla</h2>
     </div>
 
-    <div class="mt-2">
-        <div class="alert alert-success" role="alert">
-            Heroe atacando... hua hua hua
-        </div>
-    
-        <div class="alert alert-danger" role="alert">
-            Enemgo atacando... fiu fiu fiu
-        </div>
+    <div class="mt-3">
+        @foreach ($events as $ev)
+                <div class="alert  @if ($ev['winner'] == 'hero') alert-success @else alert-danger @endif" role="alert">
+                    {{ $ev['text'] }}
+                </div>       
+        @endforeach
     </div>
 
 @endsection

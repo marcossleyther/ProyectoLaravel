@@ -126,7 +126,7 @@ class BSController extends Controller
             if ($hero->hp > 0) {
                 return  [
                     "winner" => 'enemy',
-                    "text" => $hero->name . " recibio daño de " . returnemy->atq . " por " . $enemy->name
+                    "text" => $hero->name . " recibio daño de " . $enemy->atq . " por " . $enemy->name
                 ];
             } else {
                 return [

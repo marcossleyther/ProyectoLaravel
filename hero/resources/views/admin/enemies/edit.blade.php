@@ -5,7 +5,7 @@
 
     <h1>Editar - {{ $enemy->name }}</h1>
 
-    <form action="{{ route('enemy.update', ['enemy' => $enemy->id]) }}" method="post">
+    <form action="{{ route('enemy.update', ['enemy' => $enemy->id]) }}" method="post" enctype="multipart/form-data">
         @method('PUT')
 
         @include('admin.enemies.form')

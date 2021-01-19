@@ -4,7 +4,7 @@
 
 
     <h1>Crear Enemigo</h1>
-    <form action="{{ route('enemy.store') }}" method="post">
+    <form action="{{ route('enemy.store') }}" method="post" enctype="multipart/form-data">
 
         @include('admin.enemies.form')
         

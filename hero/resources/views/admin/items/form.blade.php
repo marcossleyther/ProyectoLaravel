@@ -33,3 +33,8 @@
     <input type="number" class="form-control" id="cost" name='cost' @isset($item) value="{{ $item->cost }}" @endisset placeholder="...Monedas"
         required>
 </div>
+
+<div class="form-group">
+    <label for="img_path">Imagen</label>
+    <input type="file" name="img_path" id="img_path">
+</div>

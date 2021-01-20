@@ -4,7 +4,7 @@
     
 
     <h1>Crear Heroes</h1>
-    <form action="{{ route('heroes.store') }}" method="post">
+    <form action="{{ route('heroes.store') }}" method="post" enctype="multipart/form-data">
        
         @include('admin.heroes.form')
         
